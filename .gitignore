@@ -1,0 +1,18 @@
+*~
+.#*
+## the next line needs to start with a backslash to avoid looking like
+## a comment
+\#*#
+.*.swp
+
+*.pyc
+*.pyo
+.envrc
+
+/*.egg-info
+/virtualenv
+
+config.yaml
+site.conf
+
+result*

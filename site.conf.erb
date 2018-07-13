@@ -1,0 +1,29 @@
+[DEFAULT]
+host: <%= ENV["endpoint"] %>
+port: 80
+is_secure: no
+
+[fixtures]
+bucket prefix = <%= ENV["bucket"] %>-{random}-
+
+[s3 main]
+user_id: AWS_USER_ID
+display_name: AWS_DISPLAY_NAME
+email: AWS_EMAIL
+access_key: <%= ENV["AWS_ACCESS_KEY_ID"] %>
+secret_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
+## If KMS is tested, this if barbican key id. Optional.
+#   kms_keyid: barbican_key_id
+
+[s3 alt]
+user_id: AWS_USER_ID
+display_name: AWS_DISPLAY_NAME
+email: AWS_EMAIL
+access_key: <%= ENV["AWS_ACCESS_KEY_ID"] %>
+secret_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
+#    user_id: AWS_USER_ID
+#    display_name: AWS_DISPLAY_NAME
+#    email: AWS_EMAIL
+#    access_key: 
+#    secret_key: 
+
